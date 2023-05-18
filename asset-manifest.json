@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/argSozluk/static/css/main.86191ae8.css",
+    "main.js": "/argSozluk/static/js/main.d3a8291c.js",
+    "index.html": "/argSozluk/index.html",
+    "main.86191ae8.css.map": "/argSozluk/static/css/main.86191ae8.css.map",
+    "main.d3a8291c.js.map": "/argSozluk/static/js/main.d3a8291c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.86191ae8.css",
+    "static/js/main.d3a8291c.js"
+  ]
+}
