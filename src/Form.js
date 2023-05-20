@@ -89,7 +89,7 @@ function Form() {
               name="kaynaklar"
             />
           </div>
-          <Button type="submit" className="mt-6 mb-6" fullWidth>
+          <Button type="submit" className="mt-6 mb-6" style={{backgroundColor:"#d60814"}} fullWidth>
             Gönder
           </Button>
         </form>
