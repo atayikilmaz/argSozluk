@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { Card, Input, Button, Typography, Textarea } from '@material-tailwind/react';
 
-
 function Form() {
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        // Handle form submission logic here
+    };
 
     return (
         <div className="flex justify-center items-center h-screen">
@@ -13,7 +16,7 @@ function Form() {
                 <Typography color="gray" className="mt-2 font-normal text-center">
                     Bize göndermek istediğiniz argüman bilgilerini giriniz.
                 </Typography>
-                <form className="mt-8 mb-2 max-w-screen-lg sm:w-96" action="/#/success" name="oneri" method="POST">
+                <form className="mt-8 mb-2 max-w-screen-lg sm:w-96" name="oneri" method="POST" onSubmit={handleSubmit}>
                     <input type="hidden" name="form-name" value="oneri" />
                     <div className="mb-4 flex flex-col gap-6">
                         <Input
