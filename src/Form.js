@@ -60,12 +60,14 @@ function Form() {
             top: 0,
             left: '50%',
             marginTop: '4rem',
+            marginLeft: "50%",
+            marginRight: "50%",
             backgroundColor: 'rgba(76, 175, 80, 0.8)',
             color: '#ffffff',
             padding: '8px 16px',
             borderRadius: '4px',
             opacity: 1,
-            animation: 'fadeOut 1s',
+            animation: 'fadeOut 2s',
           }}
         >
           Başarıyla gönderildi
