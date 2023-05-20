@@ -44,28 +44,20 @@ function Form() {
     <div className="flex justify-center items-center h-screen">
       {showSuccessMessage && (
         <div
-          style={{
-            position: 'fixed',
-            top: 0,
-            left: '50%',
-            transform: 'translateX(-50%)',
-            backgroundColor: 'rgba(76, 175, 80, 0.8)',
-            color: '#ffffff',
-            padding: '8px 16px',
-            borderRadius: '4px',
-            animation: 'fadeOut 1s ease-in',
-            animationName: `
-              @keyframes fadeOut {
-                0% {
-                  opacity: 1;
-                }
-                100% {
-                  opacity: 0;
-                }
-              }
-            `
-          }}
-        >
+        style={{
+          position: 'fixed',
+          top: 0,
+          left: '50%',
+          transform: 'translateX(-50%)',
+          marginTop: '4rem',
+          backgroundColor: 'rgba(76, 175, 80, 0.8)',
+          color: '#ffffff',
+          padding: '8px 16px',
+          borderRadius: '4px',
+          opacity: 1,
+          transition: 'opacity 1s ease',
+        }}
+      >
           Başarıyla gönderildi
         </div>
       )}
