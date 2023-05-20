@@ -2,9 +2,29 @@ import React, { useState } from 'react';
 import { Card, Input, Button, Typography, Textarea } from '@material-tailwind/react';
 
 function Form() {
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
-        // Handle form submission logic here
+        const form = event.target;
+        
+        try {
+            const response = await fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams(new FormData(form)).toString()
+            });
+            
+            if (response.ok) {
+                // Form submission succeeded
+                // Handle success logic here
+                console.log('Form submitted successfully');
+            } else {
+                // Form submission failed
+                // Handle error logic here
+                console.error('Form submission failed');
+            }
+        } catch (error) {
+            console.error('An error occurred during form submission:', error);
+        }
     };
 
     return (
