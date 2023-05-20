@@ -51,7 +51,7 @@ export default function Example() {
         <Typography color="gray" className="mt-2 font-normal text-center">
           Bize göndermek istediğiniz argüman bilgilerini giriniz.
         </Typography>
-        <form className="mt-8 mb-2 max-w-screen-lg sm:w-96" onSubmit={handleSubmit} name="oneri" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <form className="mt-8 mb-2 max-w-screen-lg sm:w-96" onSubmit="submit" name="oneri" method="POST" data-netlify="true" netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="oneri" /> {/* Hidden input for Netlify form submission */}
           <div className="mb-4 flex flex-col gap-6">
             <Input
