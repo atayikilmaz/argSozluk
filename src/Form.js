@@ -10,7 +10,13 @@ export default function Example() {
   });
   const navigate = useNavigate();
 
-  
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Your form submission logic here
+
+    // Redirect to app.js (or any desired route)
+    navigate('/success');
+  };
 
   const handleChange = (event) => {
     setFormValues({
