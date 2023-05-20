@@ -6,17 +6,12 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Success from './Pages/Success';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-  },
-  {
-    path: "/success",
-    element: <Success />,
   },
 ]);
 
