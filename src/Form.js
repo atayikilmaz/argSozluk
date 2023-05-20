@@ -59,14 +59,13 @@ function Form() {
             position: 'fixed',
             top: 0,
             left: '50%',
-            transform: 'translateX(-50%)',
             marginTop: '4rem',
             backgroundColor: 'rgba(76, 175, 80, 0.8)',
             color: '#ffffff',
             padding: '8px 16px',
             borderRadius: '4px',
             opacity: 1,
-            animation: 'fadeOut 0.8s',
+            animation: 'fadeOut 1s',
           }}
         >
           Başarıyla gönderildi
