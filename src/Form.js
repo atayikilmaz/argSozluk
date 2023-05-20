@@ -53,7 +53,17 @@ function Form() {
             color: '#ffffff',
             padding: '8px 16px',
             borderRadius: '4px',
-            animation: 'fadeOut 1s ease-in'
+            animation: 'fadeOut 1s ease-in',
+            animationName: `
+              @keyframes fadeOut {
+                0% {
+                  opacity: 1;
+                }
+                100% {
+                  opacity: 0;
+                }
+              }
+            `
           }}
         >
           Başarıyla gönderildi
