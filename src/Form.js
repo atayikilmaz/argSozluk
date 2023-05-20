@@ -33,7 +33,7 @@ function Form() {
   return (
     <div className="flex justify-center items-center h-screen">
       {showSuccessMessage && (
-        <div className="bg-green-100 bg-opacity-75 rounded-md text-green-600 py-2 px-4 text-center fixed top-0 left-1/2 transform -translate-x-1/2">
+        <div className="bg-green-100 mt-4 bg-opacity-75 rounded-md text-green-600 py-2 px-4 text-center fixed top-0 left-1/2 transform -translate-x-1/2">
           Başarıyla gönderildi
         </div>
       )}
