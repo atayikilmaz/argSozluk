@@ -2,20 +2,23 @@ import React, { useState } from 'react';
 import { Card, Input, Button, Typography, Textarea } from '@material-tailwind/react';
 
 function Form() {
+    const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+
     const handleSubmit = async (event) => {
         event.preventDefault();
         const form = event.target;
-        
+
         try {
             const response = await fetch('/', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                 body: new URLSearchParams(new FormData(form)).toString()
             });
-            
+
             if (response.ok) {
                 // Form submission succeeded
                 // Handle success logic here
+                setShowSuccessMessage(true);
                 console.log('Form submitted successfully');
             } else {
                 // Form submission failed
@@ -63,6 +66,11 @@ function Form() {
                         Gönder
                     </Button>
                 </form>
+                {showSuccessMessage && (
+                    <div className="bg-green-100 bg-opacity-75 rounded-md text-green-600 py-2 px-4 text-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                        Başarıyla gönderildi
+                    </div>
+                )}
             </Card>
         </div>
     );
