@@ -12,6 +12,7 @@ export default function Example() {
   const handleSubmit = (event) => {
     event.preventDefault();
     // Your form submission logic here
+    
 
     // Clear input values
     setFormValues({
@@ -51,7 +52,7 @@ export default function Example() {
         <Typography color="gray" className="mt-2 font-normal text-center">
           Bize göndermek istediğiniz argüman bilgilerini giriniz.
         </Typography>
-        <form className="mt-8 mb-2 max-w-screen-lg sm:w-96" onSubmit={handleSubmit}>
+        <form className="mt-8 mb-2 max-w-screen-lg sm:w-96" onSubmit={handleSubmit} name="oneri" method="POST" netlify>
           <div className="mb-4 flex flex-col gap-6">
             <Input
               size="lg"
@@ -69,7 +70,7 @@ export default function Example() {
               onChange={handleChange}
               rows={4}
             />
-            <Input
+            <Textarea
               size="lg"
               label="Kaynaklar"
               name="kaynaklar"
