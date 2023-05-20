@@ -7,27 +7,7 @@ export default function Example() {
     argumanIcerigi: '',
     kaynaklar: ''
   });
-  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Your form submission logic here
-
-    // Clear input values
-    setFormValues({
-      argumanBasligi: '',
-      argumanIcerigi: '',
-      kaynaklar: ''
-    });
-
-    // Show success message
-    setShowSuccessMessage(true);
-
-    // Hide success message after 1 second
-    setTimeout(() => {
-      setShowSuccessMessage(false);
-    }, 1000);
-  };
+ 
 
   const handleChange = (event) => {
     setFormValues({
@@ -82,11 +62,8 @@ export default function Example() {
             Gönder
           </Button>
         </form>
-        {showSuccessMessage && (
-          <div className="bg-green-100 bg-opacity-75 rounded-md text-green-600 py-2 px-4 text-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-            Başarıyla gönderildi
-          </div>
-        )}
+        
+        
       </Card>
     </div>
   );
