@@ -10,14 +10,7 @@ export default function Example() {
   });
   const navigate = useNavigate();
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Your form submission logic here
-
-    // Redirect to app.js (or any desired route)
-    navigate('/success');
-  };
-
+  
   const handleChange = (event) => {
     setFormValues({
       ...formValues,
@@ -34,7 +27,7 @@ export default function Example() {
         <Typography color="gray" className="mt-2 font-normal text-center">
           Bize göndermek istediğiniz argüman bilgilerini giriniz.
         </Typography>
-        <form className="mt-8 mb-2 max-w-screen-lg sm:w-96"  name="oneri" method="POST">
+        <form className="mt-8 mb-2 max-w-screen-lg sm:w-96" action="/success" name="oneri" method="POST">
           <input type="hidden" name="form-name" value="oneri" />
           <div className="mb-4 flex flex-col gap-6">
             <Input

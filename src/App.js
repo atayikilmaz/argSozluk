@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ArgList from './ArgList';
 import logo from './ArgSozluk.svg';
 import Form from './Form';
-import Success from './Success';
+import Success from './Pages/Success';
 
 function App() {
   const scrollToBottom = () => {
