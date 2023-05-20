@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Card, Input, Button, Typography, Textarea } from '@material-tailwind/react';
 
 function Form() {
@@ -20,11 +20,6 @@ function Form() {
         // Handle success logic here
         setShowSuccessMessage(true);
         console.log('Form submitted successfully');
-        
-        // Clear success message after 1 second
-        setTimeout(() => {
-          setShowSuccessMessage(false);
-        }, 1000);
       } else {
         // Form submission failed
         // Handle error logic here
@@ -34,6 +29,16 @@ function Form() {
       console.error('An error occurred during form submission:', error);
     }
   };
+
+  useEffect(() => {
+    if (showSuccessMessage) {
+      const timeout = setTimeout(() => {
+        setShowSuccessMessage(false);
+      }, 1000);
+
+      return () => clearTimeout(timeout);
+    }
+  }, [showSuccessMessage]);
 
   return (
     <div className="flex justify-center items-center h-screen">
