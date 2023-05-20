@@ -20,6 +20,11 @@ function Form() {
         // Handle success logic here
         setShowSuccessMessage(true);
         console.log('Form submitted successfully');
+        
+        // Clear success message after 1 second
+        setTimeout(() => {
+          setShowSuccessMessage(false);
+        }, 1000);
       } else {
         // Form submission failed
         // Handle error logic here
