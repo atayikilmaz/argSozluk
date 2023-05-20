@@ -16,13 +16,9 @@ function Form() {
       });
 
       if (response.ok) {
-        // Form submission succeeded
-        // Handle success logic here
         setShowSuccessMessage(true);
         console.log('Form submitted successfully');
       } else {
-        // Form submission failed
-        // Handle error logic here
         console.error('Form submission failed');
       }
     } catch (error) {
@@ -42,22 +38,37 @@ function Form() {
 
   return (
     <div className="flex justify-center items-center h-screen">
+      <style>
+        {`
+        @keyframes fadeOut {
+          from {
+            opacity: 1;
+            transform: translateY(0);
+          }
+          to {
+            opacity: 0;
+            transform: translateY(-20px);
+          }
+        }
+      `}
+      </style>
       {showSuccessMessage && (
         <div
-        style={{
-          position: 'fixed',
-          top: 0,
-          left: '50%',
-          transform: 'translateX(-50%)',
-          marginTop: '4rem',
-          backgroundColor: 'rgba(76, 175, 80, 0.8)',
-          color: '#ffffff',
-          padding: '8px 16px',
-          borderRadius: '4px',
-          opacity: 1,
-          transition: 'opacity 1s ease',
-        }}
-      >
+          className="fade-out"
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: '50%',
+            transform: 'translateX(-50%)',
+            marginTop: '4rem',
+            backgroundColor: 'rgba(76, 175, 80, 0.8)',
+            color: '#ffffff',
+            padding: '8px 16px',
+            borderRadius: '4px',
+            opacity: 1,
+            animation: 'fadeOut 0.8s',
+          }}
+        >
           Başarıyla gönderildi
         </div>
       )}
@@ -101,3 +112,4 @@ function Form() {
 }
 
 export default Form;
+
