@@ -2,6 +2,7 @@ import Search from './Search';
 import ArgList from './ArgList';
 import logo from './ArgSozluk.svg';
 import Form from './Form';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 
 function App() {
