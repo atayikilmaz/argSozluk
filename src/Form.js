@@ -31,10 +31,12 @@ export default function Example() {
         <Typography color="gray" className="mt-2 font-normal text-center">
           Bize göndermek istediğiniz argüman bilgilerini giriniz.
         </Typography>
-        <form className="mt-8 mb-2 max-w-screen-lg sm:w-96" onSubmit="submit" name="oneri" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+
+        <form className="mt-8 mb-2 max-w-screen-lg sm:w-96" action='/oneri'  name="oneri" method="POST" >
           <input type="hidden" name="form-name" value="oneri" /> {/* Hidden input for Netlify form submission */}
           <div className="mb-4 flex flex-col gap-6">
             <Input
+            required
               size="lg"
               label="Argüman Başlığı"
               name="argumanBasligi"
@@ -43,6 +45,7 @@ export default function Example() {
               onKeyPress={handleKeyPress} // Add the onKeyPress event handler
             />
             <Textarea
+            required
               size="lg"
               label="Argüman İçeriği"
               name="argumanIcerigi"
@@ -51,6 +54,7 @@ export default function Example() {
               rows={4}
             />
             <Textarea
+            required
               size="lg"
               label="Kaynaklar"
               name="kaynaklar"
