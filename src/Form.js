@@ -53,27 +53,26 @@ function Form() {
       `}
       </style>
       {showSuccessMessage && (
-        <div
-        className="fade-out"
-        style={{
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          backgroundColor: 'rgba(76, 175, 80, 0.8)',
-          color: '#ffffff',
-          padding: '8px 16px',
-          borderRadius: '4px',
-          opacity: 1,
-          animation: 'fadeOut 3s',
-        }}
-      >
-        Başarıyla gönderildi
-      </div>
+       <div
+       className="fade-out"
+       style={{
+         position: 'fixed',
+         top: '4rem',
+         left: 0,
+         right: 0,
+         margin: '0 auto',
+         width: 'fit-content',
+         backgroundColor: 'rgba(76, 175, 80, 0.8)',
+         color: '#ffffff',
+         padding: '8px 16px',
+         borderRadius: '4px',
+         opacity: 1,
+         animation: 'fadeOut 3s',
+       }}
+     >
+       Başarıyla gönderildi
+     </div>
+     
       
       )}
       <Card color="transparent" shadow={false} className="mx-50%">
