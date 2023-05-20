@@ -12,7 +12,6 @@ export default function Example() {
   const handleSubmit = (event) => {
     event.preventDefault();
     // Your form submission logic here
-    
 
     // Clear input values
     setFormValues({
@@ -52,7 +51,8 @@ export default function Example() {
         <Typography color="gray" className="mt-2 font-normal text-center">
           Bize göndermek istediğiniz argüman bilgilerini giriniz.
         </Typography>
-        <form className="mt-8 mb-2 max-w-screen-lg sm:w-96" onSubmit={handleSubmit} name="oneri" method="POST" netlify>
+        <form className="mt-8 mb-2 max-w-screen-lg sm:w-96" onSubmit={handleSubmit} name="oneri" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="oneri" /> {/* Hidden input for Netlify form submission */}
           <div className="mb-4 flex flex-col gap-6">
             <Input
               size="lg"
@@ -83,7 +83,7 @@ export default function Example() {
           </Button>
         </form>
         {showSuccessMessage && (
-          <div className="bg-green-100  rounded-md text-green-600 py-2 px-4 text-center absolute top-0 left-0 right-0 mx-auto mt-10">
+          <div className="bg-green-100 bg-opacity-75 rounded-md text-green-600 py-2 px-4 text-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
             Başarıyla gönderildi
           </div>
         )}
