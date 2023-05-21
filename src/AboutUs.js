@@ -87,7 +87,7 @@ export default function AboutUs() {
                   color="white"
                   className="mb-12 opacity-80"
                 >
-                  Bu siteyi kurma amacımız insanların tartışırken çok kısa süre içerisinde karşı tarafa kanıtlarıyle beraber herhangi bir yorum katılmamış şekilde etkili argümanlar sunabilmesidir.
+                  Bu siteyi kurma amacımız insanların tartışırken çok kısa süre içerisinde karşı tarafa kanıtlarıyla beraber herhangi bir yorum katılmamış şekilde etkili argümanlar sunabilmesidir.
                 </Typography>
               </div>
             </div>
