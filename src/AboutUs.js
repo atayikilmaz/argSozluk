@@ -5,7 +5,7 @@ export default function AboutUs() {
     return (
         <div className="flex justify-center items-center h-screen overflow-hidden">
         <Carousel
-          className="rounded-xl mb-24 w-3/4 mt-8 md:w-2/4 lg:w-1/2 h-3/4"
+          className="rounded-xl mb-24  mt-8 w-11/12 md:w-2/4 lg:w-1/2 h-3/4"
           navigation={({ setActiveIndex, activeIndex, length }) => (
             <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
               {new Array(length).fill("").map((_, i) => (
@@ -49,7 +49,7 @@ export default function AboutUs() {
               className="h-full w-full object-cover"
             />
             <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/75">
-              <div className="w-3/4 text-center md:w-2/4">
+              <div className="w-3/5 text-center md:w-2/4">
                 <Typography
                   variant="h1"
                   color="white"
@@ -74,7 +74,7 @@ export default function AboutUs() {
               className="h-full w-full object-cover"
             />
             <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/75">
-              <div className="w-3/4 text-center md:w-2/4">
+              <div className="w-3/5 text-center md:w-2/4">
                 <Typography
                   variant="h1"
                   color="white"
@@ -99,7 +99,7 @@ export default function AboutUs() {
               className="h-full w-full object-cover"
             />
             <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/75">
-              <div className="w-3/4 text-center md:w-2/4">
+              <div className="w-3/5 text-center md:w-2/4">
                 <Typography
                   variant="h1"
                   color="white"
