@@ -37,7 +37,7 @@ function Form() {
   }, [showSuccessMessage]);
 
   return (
-    <div className="flex justify-center items-center h-screen mb-4">
+    <div className="flex justify-center items-center h-screen mb-4 mx-4">
       <style>
         {`
         @keyframes fadeOut {

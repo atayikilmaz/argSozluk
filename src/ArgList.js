@@ -36,7 +36,7 @@ export default function ArgList() {
   return (
     <div>
       <Search handleSearch={handleSearch} />
-      <div className="xl:mx-20 mt-14 sm:mx-8">
+      <div className="xl:mx-20 mt-14 sm:mx-8 mx-4">
         <Fragment>
           {filteredData.map((item, index) => (
             <Accordion open={open === index + 1} key={index} className="mb-4">
