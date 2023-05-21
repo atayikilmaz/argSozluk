@@ -9,7 +9,7 @@ function Search({ handleSearch }) {
   };
 
   return (
-    <div className="max-w-2xl mt-20 mx-auto">
+    <div className="max-w-2xl mt-20 mx-auto px-4">
       <div className="relative flex items-center w-full h-12 rounded-lg shadow-md focus-within:shadow-lg bg-neutral-400 overflow-hidden">
         <div className="grid place-items-center h-full w-12 text-gray-300">
           <svg
