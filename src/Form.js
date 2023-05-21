@@ -3,6 +3,11 @@ import { Card, Input, Button, Typography, Textarea } from '@material-tailwind/re
 
 function Form() {
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+  const [formInputs, setFormInputs] = useState({
+    argumanBasligi: '',
+    argumanIcerigi: '',
+    kaynaklar: ''
+  });
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -18,6 +23,12 @@ function Form() {
       if (response.ok) {
         setShowSuccessMessage(true);
         console.log('Form submitted successfully');
+        // Reset form inputs
+        setFormInputs({
+          argumanBasligi: '',
+          argumanIcerigi: '',
+          kaynaklar: ''
+        });
       } else {
         console.error('Form submission failed');
       }
@@ -36,6 +47,14 @@ function Form() {
     }
   }, [showSuccessMessage]);
 
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setFormInputs((prevInputs) => ({
+      ...prevInputs,
+      [name]: value
+    }));
+  };
+
   return (
     <div className="flex justify-center items-center h-screen mb-4 mx-4">
       <style>
@@ -53,27 +72,25 @@ function Form() {
       `}
       </style>
       {showSuccessMessage && (
-       <div
-       className="fade-out"
-       style={{
-         position: 'fixed',
-         top: '4rem',
-         left: 0,
-         right: 0,
-         margin: '0 auto',
-         width: 'fit-content',
-         backgroundColor: 'rgba(76, 175, 80, 0.8)',
-         color: '#ffffff',
-         padding: '8px 16px',
-         borderRadius: '4px',
-         opacity: 1,
-         animation: 'fadeOut 3s',
-       }}
-     >
-       Başarıyla gönderildi
-     </div>
-     
-      
+        <div
+          className="fade-out"
+          style={{
+            position: 'fixed',
+            top: '4rem',
+            left: 0,
+            right: 0,
+            margin: '0 auto',
+            width: 'fit-content',
+            backgroundColor: 'rgba(76, 175, 80, 0.8)',
+            color: '#ffffff',
+            padding: '8px 16px',
+            borderRadius: '4px',
+            opacity: 1,
+            animation: 'fadeOut 3s'
+          }}
+        >
+          Başarıyla gönderildi
+        </div>
       )}
       <Card color="transparent" shadow={false} className="mx-50%">
         <Typography variant="h4" color="blue-gray" className="text-center">
@@ -82,7 +99,12 @@ function Form() {
         <Typography color="gray" className="mt-2 font-normal text-center">
           Bize göndermek istediğiniz argüman bilgilerini giriniz.
         </Typography>
-        <form className="mt-8 mb-2 max-w-screen-lg sm:w-96" name="oneri" method="POST" onSubmit={handleSubmit}>
+        <form
+          className="mt-8 mb-2 max-w-screen-lg sm:w-96"
+          name="oneri"
+          method="POST"
+          onSubmit={handleSubmit}
+        >
           <input type="hidden" name="form-name" value="oneri" />
           <div className="mb-4 flex flex-col gap-6">
             <Input
@@ -90,6 +112,8 @@ function Form() {
               size="lg"
               label="Argüman Başlığı"
               name="argumanBasligi"
+              value={formInputs.argumanBasligi}
+              onChange={handleInputChange}
             />
             <Textarea
               required
@@ -97,15 +121,19 @@ function Form() {
               label="Argüman İçeriği"
               name="argumanIcerigi"
               rows={4}
+              value={formInputs.argumanIcerigi}
+              onChange={handleInputChange}
             />
             <Textarea
               required
               size="lg"
               label="Kaynaklar"
               name="kaynaklar"
+              value={formInputs.kaynaklar}
+              onChange={handleInputChange}
             />
           </div>
-          <Button type="submit" className="mt-6 mb-6" style={{backgroundColor:"#d60814"}} fullWidth>
+          <Button type="submit" className="mt-6 mb-6" style={{ backgroundColor: '#d60814' }} fullWidth>
             Gönder
           </Button>
         </form>
@@ -115,4 +143,3 @@ function Form() {
 }
 
 export default Form;
-
