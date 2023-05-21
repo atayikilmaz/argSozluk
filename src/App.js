@@ -2,6 +2,7 @@ import React from 'react';
 import ArgList from './ArgList';
 import logo from './ArgSozluk.svg';
 import Form from './Form';
+import AboutUs from './AboutUs';
 
 function App() {
   const scrollToBottom = () => {
@@ -25,6 +26,10 @@ function App() {
         <ArgList />
 
         <Form />
+
+        <AboutUs />
+
+
       </div>
   );
 }
